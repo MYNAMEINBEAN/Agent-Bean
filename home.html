@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENT BEAN - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+      /* Custom styles to enhance existing Tailwind classes or add specific effects */
+      .animate-pulse-slow {
+        animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      @keyframes pulse-slow {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: .7;
+        }
+      }
+
+      /* Scroll-snap for a smoother single-page experience (optional) */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Specific adjustments for timeline to ensure vertical alignment on small screens */
+      @media (max-width: 767px) {
+        .timeline-item {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .timeline-item .timeline-content-left,
+        .timeline-item .timeline-content-right {
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .timeline-item .timeline-content-left {
+          order: 2; /* Ensures content comes after icon on mobile */
+        }
+        .timeline-item .timeline-icon {
+          margin-bottom: 1.5rem; /* Space between icon and content on mobile */
+        }
+        .timeline-line {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="webcrumbs" class="font-body">
+      <div class="w-full min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-300">
+
+        <nav class="w-full px-6 py-4 bg-black/20 backdrop-blur-md border-b border-primary-500/20 fixed top-0 left-0 right-0 z-50 shadow-lg">
+          <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+              <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center shadow-lg">
+                <span class="material-symbols-outlined text-white text-2xl">military_tech</span>
+              </div>
+              <div>
+                <h1 class="text-2xl font-bold text-white font-title">AGENT BEAN</h1>
+                <p class="text-primary-400 text-sm">CLASSIFIED OPERATIVE</p>
+              </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+              <a href="home.html" class="text-white hover:text-primary-400 transition-colors duration-300 font-semibold text-lg">HOME</a>
+              <a href="profile.html" class="text-white hover:text-primary-400 transition-colors duration-300 font-semibold text-lg">PROFILE</a>
+              <a href="missions.html" class="text-white hover:text-primary-400 transition-colors duration-300 font-semibold text-lg">MISSIONS</a>
+              <a href="timeline.html" class="text-white hover:text-primary-400 transition-colors duration-300 font-semibold text-lg">TIMELINE</a>
+              <a href="training.html" class="text-white hover:text-primary-400 transition-colors duration-300 font-semibold text-lg">TRAINING</a>
+              <a href="skills.html" class="text-white hover:text-primary-400 transition-colors duration-300 font-semibold text-lg">SKILLS</a>
+              <a href="contact.html" class="text-white hover:text-primary-400 transition-colors duration-300 font-semibold text-lg">CONTACT</a>
+            </div>
+            <button class="md:hidden text-white hover:text-primary-400 transition-colors duration-300 focus:outline-none">
+              <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+          </div>
+        </nav>
+
+        <main class="w-full pt-20"> <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden p-6">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10"></div>
+            <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1920&h=1080" alt="Mysterious island landscape, dark and tropical, setting for Agent Bean's origins." class="absolute inset-0 w-full h-full object-cover"/>
+            <div class="relative z-20 text-center max-w-4xl mx-auto px-6">
+              <h1 class="text-6xl md:text-8xl font-bold text-white mb-6 animate-pulse-slow font-title drop-shadow-2xl">AGENT BEAN</h1>
+              <p class="text-xl md:text-2xl text-primary-300 mb-10 leading-relaxed font-body">Born from chaos. Forged by survival. Recruited by the elite.</p>
+              <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="profile.html" class="inline-block bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white px-10 py-5 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 shadow-xl text-lg tracking-wide uppercase">
+                  CLASSIFIED DOSSIER
+                </a>
+                <a href="missions.html" class="inline-block border-2 border-primary-500 text-primary-400 hover:bg-primary-500 hover:text-white px-10 py-5 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 shadow-xl text-lg tracking-wide uppercase">
+                  MISSION BRIEFING
+                </a>
+              </div>
+            </div>
+          </section>
+
+        </main>
+
+        <footer class="w-full py-8 px-6 bg-black/50 border-t border-primary-500/20 relative z-10">
+          <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center space-x-3 mb-4 md:mb-0">
+              <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center shadow-md">
+                <span class="material-symbols-outlined text-white text-base">military_tech</span>
+              </div>
+              <span class="text-slate-400 font-mono text-sm">AGENT BEAN - CLASSIFIED</span>
+            </div>
+            <div class="text-center md:text-right">
+              <p class="text-slate-500 text-sm">This information is classified under the National Security Act</p>
+              <p class="text-slate-600 text-xs mt-1">Unauthorized access is prohibited</p>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        content: ["./src/**/*.{html,js}"],
+        theme: {
+          "name": "Bluewave",
+          "fontFamily": {
+            "sans": ["Open Sans", "ui-sans-serif", "system-ui", "sans-serif", "\"Apple Color Emoji\"", "\"Segoe UI Emoji\"", "\"Segoe UI Symbol\"", "\"Noto Color Emoji\""]
+          },
+          "extend": {
+            "fontFamily": {
+              "title": ["Lato", "ui-sans-serif", "system-ui", "sans-serif", "\"Apple Color Emoji\"", "\"Segoe UI Emoji\"", "\"Segoe UI Symbol\"", "\"Noto Color Emoji\""],
+              "body": ["Open Sans", "ui-sans-serif", "system-ui", "sans-serif", "\"Apple Color Emoji\"", "\"Segoe UI Emoji\"", "\"Segoe UI Symbol\"", "\"Noto Color Emoji\""]
+            },
+            "colors": {
+              "neutral": {
+                "50": "#f7f7f7",
+                "100": "#eeeeee",
+                "200": "#e0e0e0",
+                "300": "#cacaca",
+                "400": "#b1b1b1",
+                "500": "#999999",
+                "600": "#7f7f7f",
+                "700": "#676767",
+                "800": "#545454",
+                "900": "#464646",
+                "950": "#282828"
+              },
+              "primary": {
+                "50": "#f3f1ff",
+                "100": "#e9e5ff",
+                "200": "#d5cfff",
+                "300": "#b7a9ff",
+                "400": "#9478ff",
+                "500": "#7341ff",
+                "600": "#631bff",
+                "700": "#611bf8",
+                "800": "#4607d0",
+                "900": "#3c08aa",
+                "950": "#220174",
+                "DEFAULT": "#611bf8"
+              }
+            },
+            "fontSize": {
+              "xs": ["12px", {
+                "lineHeight": "19.200000000000003px"
+              }],
+              "sm": ["14px", {
+                "lineHeight": "21px"
+              }],
+              "base": ["16px", {
+                "lineHeight": "25.6px"
+              }],
+              "lg": ["18px", {
+                "lineHeight": "27px"
+              }],
+              "xl": ["20px", {
+                "lineHeight": "28px"
+              }],
+              "2xl": ["24px", {
+                "lineHeight": "31.200000000000003px"
+              }],
+              "3xl": ["30px", {
+                "lineHeight": "36px"
+              }],
+              "4xl": ["36px", {
+                "lineHeight": "41.4px"
+              }],
+              "5xl": ["48px", {
+                "lineHeight": "52.800000000000004px"
+              }],
+              "6xl": ["60px", {
+                "lineHeight": "66px"
+              }],
+              "7xl": ["72px", {
+                "lineHeight": "75.60000000000001px"
+              }],
+              "8xl": ["96px", {
+                "lineHeight": "100.80000000000001px"
+              }],
+              "9xl": ["128px", {
+                "lineHeight": "134.4px"
+              }]
+            },
+            "borderRadius": {
+              "none": "0px",
+              "sm": "6px",
+              "DEFAULT": "12px",
+              "md": "18px",
+              "lg": "24px",
+              "xl": "36px",
+              "2xl": "48px",
+              "3xl": "72px",
+              "full": "9999px"
+            },
+            "spacing": {
+              "0": "0px",
+              "1": "4px",
+              "2": "8px",
+              "3": "12px",
+              "4": "16px",
+              "5": "20px",
+              "6": "24px",
+              "7": "28px",
+              "8": "32px",
+              "9": "36px",
+              "10": "40px",
+              "11": "44px",
+              "12": "48px",
+              "14": "56px",
+              "16": "64px",
+              "20": "80px",
+              "24": "96px",
+              "28": "112px",
+              "32": "128px",
+              "36": "144px",
+              "40": "160px",
+              "44": "176px",
+              "48": "192px",
+              "52": "208px",
+              "56": "224px",
+              "60": "240px",
+              "64": "256px",
+              "72": "288px",
+              "80": "320px",
+              "96": "384px",
+              "px": "1px",
+              "0.5": "2px",
+              "1.5": "6px",
+              "2.5": "10px",
+              "3.5": "14px"
+            }
+          }
+        },
+        plugins: [],
+        important: '#webcrumbs'
+      };
+
+      // Simple Mobile Menu Toggle
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuButton = document.querySelector('nav button.md\\:hidden');
+        const navLinks = document.querySelector('nav .hidden.md\\:flex');
+
+        menuButton.addEventListener('click', () => {
+          navLinks.classList.toggle('hidden');
+          navLinks.classList.toggle('flex');
+          navLinks.classList.toggle('flex-col');
+          navLinks.classList.toggle('absolute');
+          navLinks.classList.toggle('top-full');
+          navLinks.classList.toggle('left-0');
+          navLinks.classList.toggle('right-0');
+          navLinks.classList.toggle('bg-black/80');
+          navLinks.classList.toggle('py-4');
+          navLinks.classList.toggle('items-center');
+          navLinks.classList.toggle('space-y-4');
+          navLinks.classList.toggle('md:space-y-0'); /* Reset for desktop */
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileNavLinks = document.querySelectorAll('nav a');
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (!navLinks.classList.contains('hidden') && window.innerWidth < 768) {
+              navLinks.classList.add('hidden');
+              navLinks.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'right-0', 'bg-black/80', 'py-4', 'items-center', 'space-y-4');
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
